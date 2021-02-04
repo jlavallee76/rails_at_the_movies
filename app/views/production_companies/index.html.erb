@@ -1,7 +1,9 @@
 <h1 class="title is-2">Top Production Companies</h1></h1>
 
 <ol>
-  <% @movies.each do | movie | %>
-    <li><%= link_to production_company.name, production_company %></li>
+  <% @production_companies.each do | production_company | %>
+    <li><%= link_to production_company.name, production_company %> <em>(<%= production_company.movie.count %> Movies)</em></li>
   <% end %>
 </ol>
+
+<h2 class="title is-2">Top Production Companies</h2>
